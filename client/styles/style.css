@@ -11,11 +11,16 @@ h4 {
 }
 
 input {
-  position: absolute;
+/*  position: absolute;
   left: 95px;
   width: 300px;
-  height: 17px;
+  height: 17px;*/
 }
+
+#addTask, #newTask, #counter {
+  display: inline-block;
+}
+
 
 button {
 
