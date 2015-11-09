@@ -1,0 +1,14 @@
+{
+  "name": "toDone",
+  "version": "0.0.0",
+  "description": "",
+  "ignore": [    
+    "node_modules",
+    "bower_components",
+  ],
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16",
+    "angular-mocks": "~1.3.16"
+  }
+}
