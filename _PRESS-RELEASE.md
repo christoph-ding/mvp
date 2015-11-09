@@ -19,26 +19,44 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+    toDone
+
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+
+    This app is for people who write really detailed, long to-do lists.  ToDone forces you to prioretize and be honest with what you can accomplish.  
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+    My checklist app limits the amount of items you can try to accomplish in a day.  It will automatically calculate how long something should take, based on your estimate, and prevent you from overbooking yourself.  It will also give you rewards for accomplishing tasks.
+
+
 ## Problem ##
   > Describe the problem your product solves.
+
+    People tend to write overly detailed, too granular to-do lists that distract from what they really need to do, every day.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
+    Limits the number of items you can add.
+
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+
+    It's not a list of things to do, but will be done today.'
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+    Plan tomorrow.
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+
+    I started working out everyday!
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
