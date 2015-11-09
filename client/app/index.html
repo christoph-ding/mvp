@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='toDone'> 
+  <head>
+    <meta charset="utf-8" />
+    <title> toDone </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <h1> toDone </h1>
+    <h4> what do you want to get done today </h4>
+    
+    <span>
+      <button ng-click=""> show tasks </button>
+      <input type="text" placeholder = "it shall be done"/>  
+    </span>
+
+    <div ng-controller="taskListCtrl"> 
+      <h4> {{message}} </h4>
+      <ul>
+          <li ng-repeat="(priority,task) in tasks"> 
+            {{priority}} : {{task}}</li>
+      </ul>
+    </div>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
