@@ -12,18 +12,15 @@
     <h1> toDone </h1>
     <h4> what do you want to get done today </h4>
 
-    <div ng-controller='taskListCtrl'> 
-      <!-- <button id='addTask' ng-click='addTask()'> add task </button> -->
+    <div id='view' ng-controller='taskListCtrl'> 
       <form id='newTask' ng-submit='addTask()'>
-        <input type="text" ng-model='task' placeholder='it shall be done'/>
+        <input id='taskText' type="text" ng-model='task' placeholder='it shall be done'/>
         <p id='counter'> {{ counter }} </p>
       </form>
       <ul>
-          <li ng-click='deleteTask($index)' ng-repeat='task in tasks track by $index'> {{ task }} <br></li>
+          <li ng-click='deleteTask($index)' ng-repeat='task in tasks track by $index'> {{ task['toDo'] }} <br></li>
       </ul>
     </div>
-
-
   </body>
 </html>
 

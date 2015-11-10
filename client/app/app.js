@@ -7,13 +7,24 @@ app.controller('taskListCtrl', function($scope) {
   $scope.calculateCounter = function() {
     $scope.counter = 5 - $scope.tasks.length;
   }
+
+  $scope.askWeight = function() {    
+    
+  }
+
   $scope.addTask = function() {    
-    if ($scope.counter > 0) {
-      $scope.tasks.push($scope.task);  
-      $scope.task = ''
+    if ($scope.counter > 0 && document.querySelector('#taskText').value !== '') {
+      var taskObj = {toDo:$scope.task, weight:0}
+      $scope.tasks.push(taskObj);  
+      document.querySelector('#taskText').value = '';
       $scope.calculateCounter();
+      if ($scope.counter === 0) {
+        $scope.askWeight();
+      }
     }
   }
+
+
   $scope.deleteTask = function(index) {
     $scope.tasks.splice(index, 1);
     $scope.calculateCounter();
@@ -21,20 +32,5 @@ app.controller('taskListCtrl', function($scope) {
 
 });
 
-//   <h2>Add contact</h2>
-//   <form ng-submit="addMail()">
-//     <input type="mail" ng-model="mailAdress"/>
-//     <button type="submit">Add contact</button>
-//   </form>
-// </div>
-
-  
-//   $scope.addMail = function() {
-//     if(this.mailAdress) {
-//       $scope.contacts.push($scope.mailAdress);
-//       $scope.mailAdress = "";
-//     }
-//   };
-// }
 
 
