@@ -5,8 +5,10 @@ app.controller('taskListCtrl', function($scope) {
   $scope.counter = 5;
   $scope.hasWeightButton = false;
 
-  $scope.graphWidth = 480; 
-  $scope.graphHeight = 750;
+  $scope.graphWidth = 500; 
+  $scope.graphHeight = 350;
+
+  $scope.colorBank = []
 
   $scope.calculateCounter = function() {
     $scope.counter = 5 - $scope.tasks.length;

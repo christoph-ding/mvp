@@ -22,8 +22,7 @@ input {
 }
 
 svg {
-  position: fixed;
-  float: right;
+  float: left;
   left: 250px;
   background-color: #DA4167;
 }

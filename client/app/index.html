@@ -20,12 +20,25 @@
       <ul>
           <li ng-click='deleteTask($index)' ng-repeat='task in tasks track by $index'> {{ task['toDo'] }} <br></li>
       </ul>
-      <svg ng-model='task' ng-attr-height= {{graphHeight}} ng-attr-width= {{graphWidth}}></svg> 
+      <svg id="canvas" ng-model='task' ng-attr-height= "{{graphHeight}}" ng-attr-width="{{graphWidth}}">
+        <rect ng-repeat='task in tasks track by $index'          
+          x = '{{ $index * 100}}'
+          width='100'
+          height='350'
+          fill='#BDE4A7'/>
+      </svg>     
     </div>
 
   </body>
 </html>
 
+<!-- <svg ng-attr-height="{{graph.height}}" ng-attr-width="{{graph.width}}">  
+    <circle ng-repeat="circle in circles" 
+        ng-attr-cx="{{circle.x}}" 
+        ng-attr-cy="{{circle.y}}" 
+        ng-attr-r= "{{circle.r}}">
+    </circle>
+</svg>  -->
 
 
 
