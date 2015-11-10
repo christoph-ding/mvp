@@ -3,13 +3,21 @@ var app = angular.module('toDone', [])
 app.controller('taskListCtrl', function($scope) {
   $scope.tasks = [];
   $scope.counter = 5;
-  
+  $scope.hasWeightButton = false;
+
+  $scope.graphWidth = 480; 
+  $scope.graphHeight = 750;
+
   $scope.calculateCounter = function() {
     $scope.counter = 5 - $scope.tasks.length;
   }
 
-  $scope.askWeight = function() {    
-    
+  $scope.askWeight = function() {  
+    if ($scope.hasWeightButton === false) {
+      var weightButton = angular.element('<button href=""> Heya </button>');
+      angular.element( document.querySelector('body') ).append(weightButton);    
+      $scope.hasWeightButton = true;    
+    }
   }
 
   $scope.addTask = function() {    
@@ -23,7 +31,6 @@ app.controller('taskListCtrl', function($scope) {
       }
     }
   }
-
 
   $scope.deleteTask = function(index) {
     $scope.tasks.splice(index, 1);

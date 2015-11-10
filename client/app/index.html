@@ -20,7 +20,9 @@
       <ul>
           <li ng-click='deleteTask($index)' ng-repeat='task in tasks track by $index'> {{ task['toDo'] }} <br></li>
       </ul>
+      <svg ng-model='task' ng-attr-height= {{graphHeight}} ng-attr-width= {{graphWidth}}></svg> 
     </div>
+
   </body>
 </html>
 
