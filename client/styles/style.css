@@ -11,10 +11,6 @@ h4 {
 }
 
 input {
-/*  position: absolute;
-  left: 95px;
-  width: 300px;
-  height: 17px;*/
 }
 
 #addTask, #newTask, #counter {
@@ -22,9 +18,13 @@ input {
 }
 
 svg {
-  float: left;
-  left: 250px;
-  background-color: #DA4167;
+  position: absolute;
+  top: 35%;
+  right: 20%;
+}
+
+ul {
+  list-style-type: none;
 }
 
 button {
