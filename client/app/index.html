@@ -13,6 +13,12 @@
     <h4> what do you want to get done today </h4>
 
     <div id='view' ng-controller='taskListCtrl'> 
+      <button ng-click='saveDay()'> Save Day </button>
+      <input type="text" /><br>
+
+      <button ng-click='compareDay()'> Compare Day </button>
+      <input type="text" /><br>
+      
       <form id='newTask' ng-submit='addTask()'>
         <input id='taskText' type="text" ng-model='task' placeholder='it shall be done'/>
         <p id='counter'> {{ counter }} </p>
@@ -28,8 +34,9 @@
           fill='{{ task.color }}'
           ng-click='chipAway($index)'
           />
+      </svg>
 
-      </svg>     
+
     </div>
 
   </body>

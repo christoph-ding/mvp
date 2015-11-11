@@ -1,9 +1,8 @@
-var app = angular.module('toDone', [])
+var app = angular.module('toDone', []);
 
 app.controller('taskListCtrl', function($scope) {
   $scope.tasks = [];
-  $scope.counter = 5;
-  $scope.hasWeightButton = false;
+  $scope.counter = 5;  
 
   $scope.graphWidth = 500; 
   $scope.graphHeight = 350;
@@ -19,14 +18,6 @@ app.controller('taskListCtrl', function($scope) {
     $scope.counter = 5 - $scope.tasks.length;
   }
 
-  $scope.askWeight = function() {  
-    if ($scope.hasWeightButton === false) {
-      var weightButton = angular.element('<button href=""> Heya </button>');
-      angular.element( document.querySelector('body') ).append(weightButton);    
-      $scope.hasWeightButton = true;    
-    }
-  }
-
   $scope.addTask = function() {    
     if ($scope.counter > 0 && document.querySelector('#taskText').value !== '') {
       var taskColor = $scope.colorBank[Math.floor(Math.random() * $scope.colorBank.length)];
@@ -34,9 +25,6 @@ app.controller('taskListCtrl', function($scope) {
       $scope.tasks.push(taskObj);  
       document.querySelector('#taskText').value = '';
       $scope.calculateCounter();
-      if ($scope.counter === 0) {
-        $scope.askWeight();
-      }
     }
   }
 
@@ -51,5 +39,19 @@ app.controller('taskListCtrl', function($scope) {
     $scope.tasks.splice(index, 1);
     $scope.calculateCounter();
   }
+
+  $scope.compareDay = function() {
+  }
+
+  $scope.saveDay = function() {
+    return $http({
+      method: 'POST',
+      url: '/app/',  
+      data: $scope.task
+    }) 
+    .then(function (resp) {
+      return resp;
+    });
+  };
 });
 
